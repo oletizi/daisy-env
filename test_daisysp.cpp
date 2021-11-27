@@ -1,5 +1,3 @@
-#pragma clang diagnostic push
-#pragma ide diagnostic ignored "cert-err58-cpp"
 #include <plog/Log.h>
 #include <plog/Appenders/ColorConsoleAppender.h>
 #include <gtest/gtest.h>
@@ -11,11 +9,11 @@
 TEST(Metro, MetroFrequency) {
     daisysp::Metro metro;
     float frequency = 1000;
-    float sample_rate = 48000;
-    metro.Init(frequency, sample_rate);
+    float sampleRate = 48000;
+    metro.Init(frequency, sampleRate);
 
     int ticks = 0;
-    for (int i=0; i<sample_rate; i++) {
+    for (int i = 0; i < (int) sampleRate; i++) {
         ticks += metro.Process();
     }
     EXPECT_EQ(ticks, frequency);
@@ -27,4 +25,3 @@ int main(int argc, char *argv[]) {
     testing::InitGoogleTest(&argc, argv);
     return RUN_ALL_TESTS();
 }
-#pragma clang diagnostic pop
