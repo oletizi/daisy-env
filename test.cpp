@@ -1,4 +1,4 @@
-#include <plog/Log.h> // Step1: include the headers
+#include <plog/Log.h>
 #include <plog/Appenders/ColorConsoleAppender.h>
 
 int main() {
