@@ -8,5 +8,8 @@ conan_basic_setup()
 
 add_library(DaisySP STATIC lib/DaisySP/Utility/metro.cpp)
 add_executable(simple_env main.cpp)
+add_executable(tests test.cpp)
+
 include_directories(lib/DaisySP)
 target_link_libraries(simple_env DaisySP ${CONAN_LIBS})
+target_link_libraries(tests DaisySP ${CONAN_LIBS})

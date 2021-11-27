@@ -3,4 +3,4 @@ cmake
 
 [requires]
 plog/1.1.5
-
+gtest/1.11.0
