@@ -9,9 +9,14 @@ int main() {
     plog::init(plog::debug, &consoleAppender);
     daisysp::Metro metro;
     metro.Init(1000, 48000);
-    uint8_t processed = metro.Process();
 
-    PLOGI.printf("Processed: %d", processed);
+    int hits = 0;
+
+    for (int i=0; i<48000; i++) {
+        hits += metro.Process();
+    }
+
+    PLOGI.printf("Hits: %d", hits);
     PLOGI.printf("Hello, log");
 
     return 0;
