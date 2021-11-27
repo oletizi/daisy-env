@@ -1,0 +1,2 @@
+[submodule "lib/DaisySP"]
+	url = git@github.com:electro-smith/DaisySP.git
