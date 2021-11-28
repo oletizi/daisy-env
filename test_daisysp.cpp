@@ -18,3 +18,4 @@ TEST(Metro, MetroFrequency) {
     }
     EXPECT_EQ(ticks, frequency);
 }
+

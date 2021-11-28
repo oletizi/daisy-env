@@ -1,0 +1,12 @@
+rtaudio install:
+-- Install configuration: "Debug"
+-- Installing: /usr/local/lib/librtaudio.6.0.2.dylib
+-- Installing: /usr/local/lib/librtaudio.6.dylib
+-- Installing: /usr/local/lib/librtaudio.dylib
+-- Installing: /usr/local/include/rtaudio/RtAudio.h
+-- Installing: /usr/local/include/rtaudio/rtaudio_c.h
+-- Installing: /usr/local/share/rtaudio/RtAudioConfig.cmake
+-- Installing: /usr/local/share/rtaudio/RtAudioConfig-version.cmake
+-- Installing: /usr/local/share/rtaudio/RtAudioTargets.cmake
+-- Installing: /usr/local/share/rtaudio/RtAudioTargets-debug.cmake
+-- Installing: /usr/local/lib/pkgconfig/rtaudio.pc
