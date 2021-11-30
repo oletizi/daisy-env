@@ -22,7 +22,9 @@ add_executable(${PROJECT_NAME} main.cpp)
 add_executable(${PROJECT_TEST_NAME} test.cpp test_daisysp.cpp) # <=== TESTING: add test files here
 add_executable(${PROJECT_TEST_REALTIME_NAME} test_host_realtime.cpp) # <=== REALTIME: add realtime on-host tests here
 
-include_directories(${PROJECT_SOURCE_DIR}/lib/test)
+target_include_directories(testlib
+        PUBLIC
+        ${PROJECT_SOURCE_DIR}/lib/test)
 ### XXX: Don't do this. This will break. Use conan instead.
 include_directories(${DAISY_SP_PATH})
 include_directories(/usr/local/include)
