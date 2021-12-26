@@ -1,7 +1,6 @@
 #include "Utility/metro.h"
 #include <plog/Log.h> // Step1: include the headers
 #include <plog/Appenders/ColorConsoleAppender.h>
-#include <gtest/gtest.h>
 
 int main() {
     static plog::ColorConsoleAppender<plog::TxtFormatter> consoleAppender;
