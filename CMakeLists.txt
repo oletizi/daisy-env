@@ -41,4 +41,9 @@ target_link_libraries(${PROJECT_NAME} DaisySP ${CONAN_LIBS})
 
 
 ### Tests
-add_subdirectory(test)
+option(PACKAGE_TESTS "Build the tests" ON)
+if(PACKAGE_TESTS)
+    enable_testing()
+    include(GoogleTest)
+    add_subdirectory(test)
+endif()

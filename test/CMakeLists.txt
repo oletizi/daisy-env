@@ -4,7 +4,11 @@ set(PROJECT_TEST_REALTIME_NAME test_host_realtime)
 add_library(testlib STATIC ${PROJECT_SOURCE_DIR}/lib/test/primitive/saw.cpp)
 
 ### Tests
+file(GLOB_RECURSE TEST_SOURCES LIST_DIRECTORIES false *.h *.cpp)
+set(SOURCES ${TEST_SOURCES})
 add_executable(${PROJECT_TEST_NAME} test.cpp test_daisysp.cpp) # <=== TESTING: add test files here
+add_test(NAME ${PROJECT_TEST_NAME} COMMAND ${PROJECT_TEST_NAME})
+
 add_executable(${PROJECT_TEST_REALTIME_NAME} test_host_realtime.cpp) # <=== REALTIME: add realtime on-host tests here
 target_include_directories(testlib PUBLIC ${PROJECT_SOURCE_DIR}/lib/test)
 target_link_libraries(${PROJECT_TEST_NAME} DaisySP ${CONAN_LIBS})
